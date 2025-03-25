@@ -1,0 +1,43 @@
+<h1>Create ToDo list</h1>
+<form action="/todoList" method="post">
+  <label>
+    Label
+    <input type="text" name="label" placeholder="Enter a label..." required/>
+  </label>
+  <label>
+    Description
+    <textarea name="description" placeholder="Enter a description..." required></textarea>
+  </label>
+  <h2>Tasks</h2>
+  <table id="tasks-table">
+    <thead>
+    <tr>
+      <th>Label</th>
+      <th>Is done ?</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody id="tasks-table-body"></tbody>
+  </table>
+  <button type="button" onclick="addTask()">+ Add a task</button>
+  <button type="submit">Create ToDo list</button>
+</form>
+<script>
+  let taskIndex = 0
+  const tableBody = document.getElementById("tasks-table-body")
+
+  function removeTask(element) {
+    element.parentNode.parentNode.remove()
+  }
+
+  function addTask() {
+    tableBody.innerHTML += `
+      <tr>
+          <td><input type="text" name="tasks[${taskIndex}][label]" required></td>
+          <td><input type="checkbox" name="tasks[${taskIndex}][isDone]" value="true"></td>
+          <td><button type="button" onclick="removeTask(this)">- Remove</button></td>
+      </tr>
+    `
+    taskIndex++
+  }
+</script>

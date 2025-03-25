@@ -1,0 +1,53 @@
+* {
+    font-family: sans-serif;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 1.8rem;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 5px 10px;
+}
+
+span.badge {
+    padding: 3px 8px;
+    border-radius: 15px;
+    background-color: darkslategray;
+    color: white;
+    font-size: 70%;
+}
+
+span.badge.badge-primary {
+    background-color: dodgerblue;
+}
+
+span.badge.badge-success {
+    background-color: green;
+}
+
+span.badge.badge-warning {
+    background-color: darkgoldenrod;
+}
+
+form label, form button {
+    display: block;
+    margin: 5px;
+}

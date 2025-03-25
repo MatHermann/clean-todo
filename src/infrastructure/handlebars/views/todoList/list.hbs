@@ -1,0 +1,31 @@
+<h1>ToDo lists</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Label</th>
+    <th># Tasks</th>
+    <th>Status</th>
+    <th>Creation date</th>
+    <th>Last update</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#each todoLists}}
+    <tr>
+      <td>{{id}}</td>
+      <td>{{label}}</td>
+      <td>{{numTasks}}</td>
+      <td><span class="badge {{statusBadge}}">{{status}}</span></td>
+      <td>{{createdAt}}</td>
+      <td>{{updatedAt}}</td>
+      <td>
+        <button>View</button>
+        <button>Edit</button>
+        <button>Delete</button>
+      </td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
