@@ -1,7 +1,7 @@
-import CreateTodoListInputPort from "../../domain/usecases/create_task/CreateTodoListInputPort";
-import CreateTodoList from "../../domain/usecases/create_task/CreateTodoList";
-import ListTodoListInputPort from "../../domain/usecases/list_task/ListTodoListInputPort";
-import ListTodoList from "../../domain/usecases/list_task/ListTodoList";
+import CreateTodoListInputPort from "../../domain/usecases/create_todolist/CreateTodoListInputPort";
+import CreateTodoList from "../../domain/usecases/create_todolist/CreateTodoList";
+import ListTodoListInputPort from "../../domain/usecases/list_todolist/ListTodoListInputPort";
+import ListTodoList from "../../domain/usecases/list_todolist/ListTodoList";
 import {getIdGenerator} from "./adapters_factory";
 import {getTodoListRepository} from "./repositories_factory";
 

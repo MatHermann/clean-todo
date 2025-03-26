@@ -1,5 +1,5 @@
-import CreateTodoListOutputPort from "../../../../domain/usecases/create_task/CreateTodoListOutputPort";
-import {CreateTodoListResponse} from "../../../../domain/usecases/create_task/CreateTodoListResponse";
+import CreateTodoListOutputPort from "../../../../domain/usecases/create_todolist/CreateTodoListOutputPort";
+import {CreateTodoListResponse} from "../../../../domain/usecases/create_todolist/CreateTodoListResponse";
 
 export default class CreateTodoListHtmlPresenter implements CreateTodoListOutputPort {
   viewModel: Object = {};

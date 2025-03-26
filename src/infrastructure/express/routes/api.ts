@@ -1,11 +1,11 @@
 import express from "express";
-import {ListTodoListValidator, ListTodoListController} from "../controllers/api/ListTodoListController";
-import {CreateTodoListValidator, CreateTodoListController} from "../controllers/api/CreateTodoListController";
+import {ListTodoListApiValidator, ListTodoListApiController} from "../controllers/api/ListTodoListApiController";
+import {CreateTodoListApiValidator, CreateTodoListApiController} from "../controllers/api/CreateTodoListApiController";
 
 const router = express.Router();
 
-router.get("/todoList", ListTodoListValidator, ListTodoListController);
-router.post("/todoList", CreateTodoListValidator, CreateTodoListController);
+router.get("/todoList", ListTodoListApiValidator, ListTodoListApiController);
+router.post("/todoList", CreateTodoListApiValidator, CreateTodoListApiController);
 
 export default {
   path: "/api",

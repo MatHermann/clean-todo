@@ -3,7 +3,7 @@ import {checkSchema, validationResult, matchedData} from "express-validator";
 import {getListTodoList} from "../../../di/usecases_factory";
 import ListTodoListJsonPresenter from "../../presenters/json/ListTodoListJsonPresenter";
 
-export const ListTodoListValidator = checkSchema(
+export const ListTodoListApiValidator = checkSchema(
   {
     page: {isInt: {options: {min: 1}}},
     itemsPerPage: {isInt: {options: {min: 1, max: 50}}},
@@ -11,7 +11,7 @@ export const ListTodoListValidator = checkSchema(
   ["query"],
 );
 
-export const ListTodoListController = async (req: Request, res: Response) => {
+export const ListTodoListApiController = async (req: Request, res: Response) => {
   const result = validationResult(req);
   if (!result.isEmpty()) {
     res.status(400).json({errors: result.array()})

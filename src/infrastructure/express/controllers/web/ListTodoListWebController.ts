@@ -3,14 +3,14 @@ import {checkSchema, validationResult, matchedData} from "express-validator";
 import {getListTodoList} from "../../../di/usecases_factory";
 import ListTodoListHtmlPresenter from "../../presenters/html/ListTodoListHtmlPresenter";
 
-export const ListTodoListValidator = checkSchema(
+export const ListTodoListWebValidator = checkSchema(
   {
     page: {isInt: {options: {min: 1}}},
   },
   ["query"],
 );
 
-export const ListTodoListController = async (req: Request, res: Response) => {
+export const ListTodoListWebController = async (req: Request, res: Response) => {
   const result = validationResult(req);
 
   const useCase = getListTodoList();

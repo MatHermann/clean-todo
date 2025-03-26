@@ -1,5 +1,5 @@
-import ListTodoListOutputPort from "../../../../domain/usecases/list_task/ListTodoListOutputPort";
-import {ListTodoListResponse} from "../../../../domain/usecases/list_task/ListTodoListResponse";
+import ListTodoListOutputPort from "../../../../domain/usecases/list_todolist/ListTodoListOutputPort";
+import {ListTodoListResponse} from "../../../../domain/usecases/list_todolist/ListTodoListResponse";
 
 export default class ListTodoListJsonPresenter implements ListTodoListOutputPort {
   json: Object = {};

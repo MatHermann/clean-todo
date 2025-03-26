@@ -3,7 +3,7 @@ import {checkSchema, matchedData, validationResult} from "express-validator";
 import {getCreateTodoList} from "../../../di/usecases_factory";
 import CreateTodoListJsonPresenter from "../../presenters/json/CreateTodoListJsonPresenter";
 
-export const CreateTodoListValidator = checkSchema(
+export const CreateTodoListApiValidator = checkSchema(
   {
     label: {notEmpty: true, isString: true},
     description: {notEmpty: true, isString: true},
@@ -14,7 +14,7 @@ export const CreateTodoListValidator = checkSchema(
   ["body"],
 )
 
-export const CreateTodoListController = async (req: Request, res: Response) => {
+export const CreateTodoListApiController = async (req: Request, res: Response) => {
   const result = validationResult(req);
   if (!result.isEmpty()) {
     res.status(400).json({errors: result.array()})
